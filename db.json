@@ -1,0 +1,86 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Футболка",
+      "price": 300,
+      "image": "/images/1.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "title": "Футболка2",
+      "price": 500,
+      "image": "/images/2.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "title": "Футболка3",
+      "price": 700,
+      "image": "/images/3.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "title": "Футболка4",
+      "price": 300,
+      "image": "/images/4.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "title": "Футболка5",
+      "price": 500,
+      "image": "/images/5.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "title": "Футболка6",
+      "price": 700,
+      "image": "/images/6.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "title": "Футболка7",
+      "price": 700,
+      "image": "/images/7.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "title": "Футболка8",
+      "price": 300,
+      "image": "/images/8.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 9,
+      "title": "Футболка9",
+      "price": 500,
+      "image": "/images/9.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 10,
+      "title": "Футболка10",
+      "price": 700,
+      "image": "/images/10.jpg",
+      "quantity": 1
+    }
+  ],
+
+  "posts": [
+    {
+      "title": "11111"
+    },
+    {
+      "title": "22222"
+    },
+    {
+      "title": "33333"
+    }
+  ]
+}

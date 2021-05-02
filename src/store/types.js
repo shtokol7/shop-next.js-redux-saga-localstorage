@@ -1,0 +1,39 @@
+export const actionTypes = {
+  // отвечает за ошибку в запросах
+  FAILURE: 'FAILURE',
+  
+  // каунтер
+  INCREMENT: 'INCREMENT',
+  DECREMENT: 'DECREMENT',
+  RESET: 'RESET',
+
+  // спинер
+  SPINNER_SHOW: 'SPINNER_SHOW',
+  SPINNER_HIDE: 'SPINNER_HIDE',
+
+  // загрузка одного пользователя с jsonplaseholder при запуске проеrта (SSRится)
+  LOAD_DATA: 'LOAD_DATA',
+  LOAD_DATA_SUCCESS: 'LOAD_DATA_SUCCESS',
+
+  // загрузка постов при нажатии на кнопку
+  GET_POST: 'GET_POST',
+  GET_POST_SUCCESS: 'GET_POST_SUCCESS',
+  GET_POST_FAILURE: 'GET_POST_FAILURE',
+
+  // загрузка всех продуктов
+  GET_PRODUCTS: 'GET_PRODUCTS',
+  GET_PRODUCTS_SUCCESS: 'GET_PRODUCTS_SUCCESS',
+  GET_PRODUCTS_FAILURE: 'GET_PRODUCTS_FAILURE',
+
+  // загрузка одного продукта
+  GET_ONE_PRODUCT: 'GET_ONE_PRODUCT',
+  GET_ONE_PRODUCT_SUCCESS: 'GET_ONE_PRODUCT_SUCCESS',
+  GET_ONE_PRODUCT_FAILURE: 'GET_ONE_PRODUCT_FAILURE',
+
+  // добавление в корзину
+  ADD_TO_CART: 'ADD_TO_CART',
+  CLEAR_CART: 'CLEAR_CART',
+  INCREMENT_PRODUCT: 'INCREMENT_PRODUCT',
+  DECREMENT_PRODUCT: 'DECREMENT_PRODUCT',
+  REMOVE_PRODUCT: 'REMOVE_PRODUCT',
+}
