@@ -18,7 +18,7 @@ const localStorageMiddleware = ({ getState }) => {
     const result = next(action);
     if (typeof document !== 'undefined') {
       localStorage.setItem('NEXT_JS_locaStorage', JSON.stringify(
-        getState()
+        getState().cartReducer
       ));
     }
     return result;
@@ -29,7 +29,7 @@ const localStorageMiddleware = ({ getState }) => {
 const reHydrateStore = () => { 
   if (typeof document !== 'undefined') {
     if (localStorage.getItem('NEXT_JS_locaStorage') !== null) {
-      return JSON.parse(localStorage.getItem('NEXT_JS_locaStorage')) // re-hydrate the store
+      return { cartReducer: JSON.parse(localStorage.getItem('NEXT_JS_locaStorage')) }// re-hydrate the store
     }
   }
 }
