@@ -2,73 +2,83 @@
   "products": [
     {
       "id": 1,
-      "title": "Футболка",
+      "title": "Рубашка клетчатая",
       "price": 300,
       "image": "/images/1.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "type": "Вехняя одежда"
     },
     {
       "id": 2,
-      "title": "Футболка2",
+      "title": "Пальто осеннее",
       "price": 500,
       "image": "/images/2.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "type": "Вехняя одежда"
     },
     {
       "id": 3,
-      "title": "Футболка3",
+      "title": "Трико",
       "price": 700,
       "image": "/images/3.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "type": "Нижняя одежда"
     },
     {
       "id": 4,
-      "title": "Футболка4",
+      "title": "Туфли",
       "price": 300,
       "image": "/images/4.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "type": "Обувь"
     },
     {
       "id": 5,
-      "title": "Футболка5",
+      "title": "Юбка",
       "price": 500,
       "image": "/images/5.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "type": "Нижняя одежда"
     },
     {
       "id": 6,
-      "title": "Футболка6",
+      "title": "Юбка драная",
       "price": 700,
       "image": "/images/6.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "type": "Нижняя одежда"
     },
     {
       "id": 7,
-      "title": "Футболка7",
+      "title": "Трико",
       "price": 700,
       "image": "/images/7.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "type": "Нижняя одежда"
     },
     {
       "id": 8,
-      "title": "Футболка8",
+      "title": "Рубашка",
       "price": 300,
       "image": "/images/8.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "type": "Вехняя одежда"
     },
     {
       "id": 9,
-      "title": "Футболка9",
+      "title": "Рубашка",
       "price": 500,
       "image": "/images/9.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "type": "Вехняя одежда"
     },
     {
       "id": 10,
-      "title": "Футболка10",
+      "title": "Куртка",
       "price": 700,
       "image": "/images/10.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "type": "Вехняя одежда"
     }
   ],
 

@@ -3,6 +3,7 @@ import { wrapper } from '../store/store';
 import { ThemeProvider } from 'react-jss';
 import { theme, globalStyles } from '../theme';
 import Head from 'next/head';
+import '../components/Select/Select.css';
 
 
 function App({ Component, pageProps }) {

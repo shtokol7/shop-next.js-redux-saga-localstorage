@@ -13,10 +13,6 @@ export const useStylesProductsContainer = createUseStyles((theme) => ({
       display: 'flex',
       flexWrap: 'wrap',
       margin: '0 auto',
-      padding: '0 15px',
-    },
-    [theme.up(theme.bp.bp_414)]: {
-      padding: '0px 20px',
     },
   },
 
@@ -71,7 +67,87 @@ export const useStylesProductsContainer = createUseStyles((theme) => ({
         marginRight: '0',
       }
     },
-    
+  },
+
+  products_container__form: {
+    [theme.up(theme.bp.bp_320)]: {
+      width: '100%',
+    },
+  },
+
+  products_container__wrap_filter_panel: {
+    [theme.up(theme.bp.bp_320)]: {
+      width: '100%',
+      marginBottom: '30px',
+      minHeight: '84px',
+    },
+    [theme.up(theme.bp.bp_768)]: {
+      display: 'flex',
+
+    },
+  },
+
+  products_container__wrap_filter_btn: {
+    [theme.up(theme.bp.bp_320)]: {
+      maxWidth: '100px',
+      width: '100%',
+      marginBottom: '20px',
+    },
+    [theme.up(theme.bp.bp_768)]: {
+      marginRight: '30px'
+    },
+  },
+
+  products_container__wrap_filter_element: {
+    [theme.up(theme.bp.bp_320)]: {
+      marginBottom: '3px',
+      display: 'flex',
+      flexDirection: 'column',
+      visibility: 'hidden',
+      opacity: '0',
+      height: '0px',
+      transitionDuration: '0.3s',
+    },
+    [theme.up(theme.bp.bp_768)]: {
+      flexDirection: 'row',
+    },
+    '&.show': {
+      [theme.up(theme.bp.bp_320)]: {
+        visibility: 'visible',
+        opacity: '1',
+        transitionDuration: '0.3s',
+        height: '120px',
+      },
+      [theme.up(theme.bp.bp_768)]: {
+        height: '81px',
+      },
+    }
+  },
+
+  products_container__wrap_all_checkbox: {
+    [theme.up(theme.bp.bp_320)]: {
+      marginRight: '20px',
+      marginBottom: '10px',
+    },
+    [theme.up(theme.bp.bp_768)]: {
+      marginBottom: '0',
+    },
+  },
+
+  products_container__wrap_checkbox: {
+    [theme.up(theme.bp.bp_320)]: {
+      marginBottom: '3px',
+    },
+    '&:last-child': {
+      marginBottom: '0',
+    },
+  },
+  
+  products_container__wrap_select: {
+    [theme.up(theme.bp.bp_320)]: {
+      maxWidth: '200px',
+      width: '100%',
+    },
   },
 
 }));

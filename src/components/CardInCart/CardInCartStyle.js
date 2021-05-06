@@ -1,30 +1,30 @@
 import { createUseStyles } from 'react-jss'
 
 export const useStylesCardInCart = createUseStyles((theme) => ({
-  // card_in_cart: {
-  //   [theme.up(theme.bp.bp_320)]: {
-  //     height: '370px',
-  //     boxShadow: '0 0 10px rgba(0,0,0,0.3)',
-  //     padding: '0px 15px',
-  //   },
-  // },
-
+  
   card_in_cart: {
     [theme.up(theme.bp.bp_320)]: {
-      maxWidth: '500px',
       width: '100%',
-      height: '100px',
+      height: '120px',
       marginBottom: '10px',
       boxShadow: `0 0 10px ${theme.palette.primary.shadow}`,
       display: 'flex',
       alignItems: 'center',
     },
+    [theme.up(theme.bp.bp_768)]: {
+      maxWidth: '500px',
+      height: '100px',
+    },
   },
 
   card_in_cart__wrap_img: {
     [theme.up(theme.bp.bp_320)]: {
-      maxWidth: '74px',
+      maxWidth: '89px',
       width: '100%',
+      height: '120px',
+    },
+    [theme.up(theme.bp.bp_768)]: {
+      maxWidth: '74px',
       height: '100px',
     },
     '& > img': {
@@ -34,6 +34,16 @@ export const useStylesCardInCart = createUseStyles((theme) => ({
         display: 'block',
         objectFit: 'contain',
       },
+    },
+  },
+
+  card_in_cart__wrap_info_btn: {
+    [theme.up(theme.bp.bp_320)]: {
+      width: '100%',
+    },
+    [theme.up(theme.bp.bp_768)]: {
+      display: 'flex',
+      alignItems: 'center',
     },
   },
 
@@ -53,18 +63,23 @@ export const useStylesCardInCart = createUseStyles((theme) => ({
 
   card_in_cart__title: {
     [theme.up(theme.bp.bp_320)]: {
-      ...theme.typography.body1,
+      ...theme.typography.body_1,
     },
   },
 
   card_in_cart__wrap_btns: {
     [theme.up(theme.bp.bp_320)]: {
-      maxWidth: '150px',
       width: '100%',
       display: 'flex',
       justifyContent: 'space-between',
-      marginLeft: 'auto',
       paddingRight: '10px',
+      paddingLeft: '10px',
+      paddingBottom: '10px',
+    },
+    [theme.up(theme.bp.bp_768)]: {
+      maxWidth: '150px',
+      marginLeft: 'auto',
+      paddingBottom: '0',
     },
   },
 

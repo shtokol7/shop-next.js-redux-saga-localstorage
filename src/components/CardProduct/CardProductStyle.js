@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 export const useStylesCardProduct = createUseStyles((theme) => ({
   card_product: {
     [theme.up(theme.bp.bp_320)]: {
-      height: '370px',
+      height: '390px',
       boxShadow: '0 0 10px rgba(0,0,0,0.3)',
       padding: '0px 15px',
     },
@@ -46,12 +46,19 @@ export const useStylesCardProduct = createUseStyles((theme) => ({
       width: '100%',
       display: 'flex',
       justifyContent: 'space-between',
+      marginBottom: '10px',
     },
   },
 
   card_product__price: {
     [theme.up(theme.bp.bp_320)]: {
       
+    },
+  },
+
+  card_product__wrap_btn: {
+    [theme.up(theme.bp.bp_320)]: {
+      width: '100%',
     },
   },
 

@@ -11,7 +11,7 @@ const CardProduct = ({
   handlerAddToCart,
 }) => {
   const classes = useStylesCardProduct();
-
+  
   const onAddToCart = () => {
     handlerAddToCart({
       id,
@@ -42,14 +42,16 @@ const CardProduct = ({
       </div>
 
       <div className={classes.card_product__wrap_price_button}>
-        <div className={classes.card_product__price}>Цена: {price}</div>
+        <div className={classes.card_product__price}>Цена: {price} ₽</div>
+      </div>
+
+      <div className={classes.card_product__wrap_btn}>
         <Button
           onClick={onAddToCart}
         >
           Купить
         </Button>
       </div>
-
     </div>
   );
 };

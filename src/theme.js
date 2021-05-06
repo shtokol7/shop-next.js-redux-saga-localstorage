@@ -46,6 +46,34 @@ export const theme = {
   palette,
 
   typography: {
+    h_1: {
+      [up(bp.bp_320)]: {
+        fontSize: '20px',
+        fontWeight: 'bold',
+      },
+      [up(bp.bp_414)]: {
+        fontSize: '24px'
+      },
+      [up(bp.bp_768)]: {
+        fontSize: '24px'
+      },
+      [up(bp.bp_1024)]: {
+        fontSize: '28px',
+      },
+      [up(bp.bp_1280)]: {
+        fontSize: '28px',
+      },
+      [up(bp.bp_1366)]: {
+        fontSize: '28px',
+      },
+      [up(bp.bp_1600)]: {
+        fontSize: '38px',
+      },
+      [up(bp.bp_1900)]: {
+        fontSize: '38px',
+      },
+    },
+
     body_1: {
       [up(bp.bp_320)]: {
         fontSize: '14px'
@@ -113,6 +141,9 @@ export const globalStyles = createUseStyles({
     textarea:{
       resize: 'vertical',
     },
+    'h1, h2, h3, h4, h5, h6':{
+      margin: '0',
+    }
   },
 });
 
