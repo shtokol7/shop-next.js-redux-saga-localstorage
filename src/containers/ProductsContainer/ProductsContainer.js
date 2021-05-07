@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { connect } from 'react-redux';
 import { useStylesProductsContainer } from './ProductsContainerStyle';
@@ -11,12 +11,14 @@ import SelectCustom from '../../components/Select/Select';
 const ProductsContainer = ({
   products,
   addToCart,
+  cart,
 }) => {
   const classes = useStylesProductsContainer();
   const [showFilter, setShowFilter] = useState(false);
   const [sortPrice, setSortPrice] = useState('');
 
-  // 
+
+  // чекбоксы
   const checkboxElement = [
     { type: "Вехняя одежда" },
     { type: "Нижняя одежда" },
@@ -24,6 +26,15 @@ const ProductsContainer = ({
   ];
   const [filters, setFilters] = useState([]);
 
+  useEffect(() => {
+    // делаем массив type чекбоксов из массива объектов
+    const defaultFilter = checkboxElement.map(i => i.type);
+    // если сортировочный массив пуст(ни один чекбокс не нажат), мы показываем все товары
+    if (filters.length === 0) {
+      setFilters([...defaultFilter]);
+    }
+  }, [filters])
+  
   // обработка чекбоксов, чекнутый или не чекнутый
   const handlerFormCheckbox = event => {
     const checkboxes = event.currentTarget.getElementsByTagName("input");
@@ -40,13 +51,6 @@ const ProductsContainer = ({
 
   // фильтрует товары по категориям
   const filteredProducts = (filterProduct) => {
-    // преобразуем поля объектов type в массив
-    const defaultFilter = checkboxElement.map(i => i.type);
-    // если сортировочный массив пуст(ни один чекбокс не нажат), мы показываем все товары
-    if (filters.length === 0) {
-      setFilters([...defaultFilter]);
-    }
-
     return (
       // а если хоть один чекбокс нажат, то показываем товары которые фильтрует этот чекбокс
       filters.indexOf(filterProduct.type) !== -1
@@ -119,6 +123,7 @@ const ProductsContainer = ({
                 <CardProduct
                   {...product}
                   handlerAddToCart={addToCart}
+                  productInCart={cart}
                 />
               </div>
             );
@@ -130,6 +135,7 @@ const ProductsContainer = ({
 
 const mapStateToProps = (state) => ({
   products: state.getProductsReducer.products,
+  cart: state.cartReducer.cart,
 });
 
 const mapDispatchToProps = (dispatch) => ({

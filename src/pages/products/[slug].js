@@ -1,8 +1,10 @@
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { wrapper } from '../../store/store';
 import { END } from 'redux-saga';
 import { createUseStyles } from 'react-jss';
 import Button from '../../components/Button/Button';
+import Link from 'next/link'
 
 import { getOneProduct } from '../../store/sagas/getProductsSaga';
 import Layout from '../../layouts/Layout/Layout';
@@ -77,17 +79,32 @@ const useStylesCart = createUseStyles((theme) => ({
     },
   },
 
+  product_detail__link_to_cart: {
+    [theme.up(theme.bp.bp_320)]: {
+      width: '100%',
+      padding: '7px 0',
+    },
+  },
+
 }));
 
 const Products = ({
   product,
   addToCart,
+  cart,
 }) => {
   const classes = useStylesCart();
+  const [addedItem, setAddedItem] = useState(null);
   
   const onAddToCart = () => {
     addToCart(product);
   };
+
+  useEffect(() => {
+    // ищем в корзине текущий товар, если он там есть, то меняем кнопку КУПИТЬ на В КОРЗИНУ
+    const addedItemInCart = cart.find((item) => item.id === product.id);
+    setAddedItem(addedItemInCart);
+  }, [cart])
 
   return (
     <Layout>
@@ -109,10 +126,20 @@ const Products = ({
             </div>
           </div>
 
-          <div >
-            <Button onClick={onAddToCart}>
-              Купить
-            </Button>
+          <div>
+            {addedItem
+              ? (
+                <Button className={'yellow'}>
+                  <Link href="/cart">
+                    <a className={classes.product_detail__link_to_cart}> В корзину </a>
+                  </Link>
+                </Button>
+              ) : (
+                <Button onClick={onAddToCart}>
+                  Купить
+                </Button>
+              )
+            }
           </div>
         </div>
         
@@ -138,6 +165,7 @@ export const getServerSideProps = wrapper.getServerSideProps(async ({ store, que
 
 const mapStateToProps = (state) => (console.log('slug', state),{
   product: state.getProductsReducer.product,
+  cart: state.cartReducer.cart,
 });
 
 const mapDispatchToProps = (dispatch) => ({

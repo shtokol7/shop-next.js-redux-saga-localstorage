@@ -19,7 +19,7 @@ const Button = ({
     return (
       <button
         onClick={handlerClick}
-        className={classes.button__brick}
+        className={`${classes.button__brick} ${className}`}
       >
         {children}
       </button>

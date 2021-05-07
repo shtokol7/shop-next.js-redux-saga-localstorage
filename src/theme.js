@@ -31,6 +31,7 @@ const palette = {
     ocean: '#0000ff',
     blood: '#FF0000',
     sun: '#fe7200',
+    sunLight: '#FFD700',
     shadow: 'rgba(0, 0, 0, 0.2)',
   },
   secondary: {

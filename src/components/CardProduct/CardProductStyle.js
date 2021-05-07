@@ -62,4 +62,11 @@ export const useStylesCardProduct = createUseStyles((theme) => ({
     },
   },
 
+  card_product__link_to_cart: {
+    [theme.up(theme.bp.bp_320)]: {
+      width: '100%',
+      padding: '7px 0',
+    },
+  },
+
 }));

@@ -18,6 +18,9 @@ export const useStylesButton = createUseStyles((theme) => ({
         boxShadow: `0 0 10px ${theme.palette.secondary.shadow}`,
       },
     },
+    '&.yellow': {
+      background: `${theme.palette.primary.sunLight}`,
+    }
   },
   
   button__circle: {
