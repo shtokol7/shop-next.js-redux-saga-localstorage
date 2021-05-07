@@ -29,7 +29,7 @@ const CardProduct = ({
     // ищем в корзине текущий товар, если он там есть, то меняем кнопку КУПИТЬ на В КОРЗИНУ
     const addedItemInCart = productInCart.find((item) => item.id === id);
     setAddedItem(addedItemInCart);
-  }, [productInCart])
+  }, [addedItem, productInCart])
 
   return (
     <div className={classes.card_product}>

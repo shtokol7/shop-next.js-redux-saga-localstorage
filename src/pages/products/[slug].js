@@ -104,7 +104,7 @@ const Products = ({
     // ищем в корзине текущий товар, если он там есть, то меняем кнопку КУПИТЬ на В КОРЗИНУ
     const addedItemInCart = cart.find((item) => item.id === product.id);
     setAddedItem(addedItemInCart);
-  }, [cart])
+  }, [addedItem, cart])
 
   return (
     <Layout>
