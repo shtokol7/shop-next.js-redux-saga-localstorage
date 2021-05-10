@@ -18,8 +18,7 @@ export function getProducts() {
 export function* getProductsSaga(action) {
   try {
     const res = yield call(() => fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`))
-    const data = yield res.json()
-
+    const data = yield res.json();
     // диспатчит в стор 
     yield put( 
       deliverToReducer( // вспомогательная функция, подставляет постфикс к базовому тайпу

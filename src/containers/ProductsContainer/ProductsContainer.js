@@ -25,15 +25,6 @@ const ProductsContainer = ({
     { type: "Обувь" },
   ];
   const [filters, setFilters] = useState([]);
-
-  useEffect(() => {
-    // делаем массив type чекбоксов из массива объектов
-    const defaultFilter = checkboxElement.map(i => i.type);
-    // если сортировочный массив пуст(ни один чекбокс не нажат), мы показываем все товары
-    if (filters.length === 0) {
-      setFilters([...defaultFilter]);
-    }
-  }, [filters])
   
   // обработка чекбоксов, чекнутый или не чекнутый
   const handlerFormCheckbox = event => {
@@ -51,6 +42,13 @@ const ProductsContainer = ({
 
   // фильтрует товары по категориям
   const filteredProducts = (filterProduct) => {
+    // делаем массив type чекбоксов из массива объектов
+    const defaultFilter = checkboxElement.map(i => i.type);
+    // если сортировочный массив пуст(ни один чекбокс не нажат), мы показываем все товары
+    if (filters.length === 0) {
+      setFilters([...defaultFilter]);
+    }
+
     return (
       // а если хоть один чекбокс нажат, то показываем товары которые фильтрует этот чекбокс
       filters.indexOf(filterProduct.type) !== -1
